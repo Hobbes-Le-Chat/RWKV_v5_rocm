@@ -127,7 +127,7 @@ class train_callback(pl.Callback):
                 self.log("Kt/s", kt_s, prog_bar=True, on_step=True)
             except:
                 pass
-            print(self.monitor_rocm())
+            #print(self.monitor_rocm()) Uncomment this line to print amd gpu usage
 
             trainer.my_time_ns = t_now
             if pl.__version__[0]=='2':
